@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Imóvel - FindFlat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/new-flat.css">
+</head>
+<body>
+
+    <div id="navbar-js"></div>
+
+    <main class="new-flat-page">
+        <header class="page-title">
+            <h1>Novo Imóvel</h1>
+            <p>Preencha os dados abaixo para publicar seu anúncio</p>
+        </header>
+
+        <form id="new-flat-form" class="form-card">
+            <div class="form-group">
+                <label for="flat-type">Tipo de Imóvel</label>
+                <input type="text" id="flat-type" placeholder="Ex: T2, T3, Estúdio" required>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-city">Cidade</label>
+                <input type="text" id="flat-city" placeholder="Ex: Lisboa" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="flat-address">Morada Completa</label>
+                <input type="text" id="flat-address" placeholder="Rua, Avenida, Praça..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-number">Número/Porta</label>
+                <input type="number" id="flat-number" placeholder="Ex: 12" required>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-area">Área (m²)</label>
+                <input type="number" id="flat-area" placeholder="Ex: 85" required>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-price">Valor da Renda (€)</label>
+                <input type="number" id="flat-price" placeholder="Ex: 950" required>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-ac">Ar Condicionado</label>
+                <select id="flat-ac">
+                    <option value="no">Não possui</option>
+                    <option value="yes">Sim, possui</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-year">Ano de Construção</label>
+                <input type="number" id="flat-year" placeholder="Ex: 2020" required>
+            </div>
+
+            <div class="form-group">
+                <label for="flat-available">Data de Disponibilidade</label>
+                <input type="date" id="flat-available" required>
+            </div>
+
+            <button type="submit" class="btn-save">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Publicar Imóvel
+            </button>
+        </form>
+    </main>
+
+    <div id="footer-js"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/new-flat.js"></script>
+</body>
+</html>

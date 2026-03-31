@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar - FlatFinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body class="auth-screen">
+    <main class="login-container">
+        <section class="login-visual">
+            <div class="visual-content">
+                <img src="assets/images/logo.png" alt="logo FlatFinder" class="login-logo">
+                <h2>Crie a sua conta gratuita.</h2>
+                <p>Junte-se à maior comunidade de arrendamento em Portugal e encontre o seu lar ideal.</p>
+            </div>
+        </section>
+
+        <section class="login-content">
+            <div class="form-wrapper" style="max-width: 450px;"> <header class="form-header">
+                    <h1>Registar</h1>
+                    <p>Comece a procurar o seu próximo lar!</p>
+                </header>
+
+                <form id="register-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">Nome</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="first-name" placeholder="Ex: João" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Apelido</label>
+                            <div class="input-icon">
+                                <i class="fa-solid fa-signature"></i>
+                                <input type="text" id="last-name" placeholder="Ex: Silva" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="exemplo@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Data de nascimento</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <input type="date" id="birthdate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Palavra-passe</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Mínimo 6 caracteres" required>
+                            <i class="fa-solid fa-eye toggle-password"></i>
+                        </div>
+                        <small class="password-hint">Inclua maiúscula, número e carácter especial.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar palavra-passe</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-shield-check"></i> <input type="password" id="confirm-password" placeholder="Repita a palavra-passe" required>
+                            <i class="fa-solid fa-eye toggle-password"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Criar Conta</button>
+                </form>
+
+                <footer class="form-footer">
+                    Já tem uma conta? <a href="login.html">Inicie sessão</a>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - FindFlat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/profile.css">
+</head>
+<body>
+
+    <div id="navbar-js"></div>
+
+    <main class="profile-page">
+        <div class="profile-card">
+            <header class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h1>Minha Conta</h1>
+                <p>Mantenha seus dados atualizados para uma melhor experiência</p>
+            </header>
+
+            <form id="profile-form" class="form-grid">
+                <div class="form-group">
+                    <label for="first-name">Nome</label>
+                    <input type="text" id="first-name" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Apelido</label>
+                    <input type="text" id="last-name" disabled>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="email">E-mail de Acesso</label>
+                    <input type="email" id="email" readonly title="O email não pode ser alterado">
+                    <small class="field-hint">Este é o seu identificador único.</small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="birthdate">Data de Nascimento</label>
+                    <input type="date" id="birthdate" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Nova Palavra-passe</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="••••••••" disabled>
+                        <i class="fa-solid fa-eye toggle-password"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Palavra-passe</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" placeholder="••••••••" disabled>
+                        <i class="fa-solid fa-eye toggle-password"></i>
+                    </div>
+                </div>
+
+                <div class="full-width">
+                    <small class="password-hint">Deixe em branco se não quiser alterar a senha.</small>
+                </div>
+
+                <div class="profile-actions full-width">
+                    <button type="button" class="btn-edit">
+                        <i class="fa-solid fa-pen"></i> Editar Perfil
+                    </button>
+                    
+                    <button type="submit" class="btn-update" id="btn-save" style="display: none;">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Alterações
+                    </button>
+
+                    <button type="button" class="btn-remove">
+                        <i class="fa-solid fa-user-xmark"></i> Eliminar Conta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div id="footer-js"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os imóveis - FindFlat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/all-flats.css">
+</head>
+
+<body>
+    <div id="navbar-js"></div>
+
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Encontre o imóvel ideal para arrendar com a FindFlat!</h1>
+            <p>Use os filtros para encontrar sua nova morada.</p>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section class="search-card">
+            <div class="filters-section">
+                <div class="filter-item">
+                    <label for="filter-city">Cidade:</label>
+                    <input type="text" id="filter-city" placeholder="Digite a cidade...">
+                </div>
+
+                <div class="filter-item">
+                    <label>Intervalo de preço (€):</label>
+                    <div class="input-dual">
+                        <input type="number" id="filter-price-min" placeholder="Mínimo">
+                        <input type="number" id="filter-price-max" placeholder="Máximo">
+                    </div>
+                </div>
+
+                <div class="filter-item">
+                    <label>Intervalo de área (m²):</label>
+                    <div class="input-dual">
+                        <input type="number" id="filter-area-min" placeholder="Mínimo">
+                        <input type="number" id="filter-area-max" placeholder="Máximo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="clean-btn-container">
+                <button id="clear-filters" onclick="cleanFilter()">
+                    <i class="fa-solid fa-eraser"></i> Limpar filtros
+                </button>
+            </div>
+
+            <div class="sort-section">
+                <div class="sort-item">
+                    <select id="sort-by">
+                        <option value="" disabled selected>Ordenar por</option>
+                        <option value="name">Nome</option>
+                        <option value="date">Data</option>
+                        <option value="price">Preço</option>
+                    </select>
+                </div>
+
+                <div class="sort-item">
+                    <select id="order">
+                        <option value="" disabled selected>Ordem</option>
+                        <option value="asc">Crescente</option>
+                        <option value="desc">Decrescente</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table class="flats-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Cidade</th>
+                        <th>Morada</th>
+                        <th>Nº</th>
+                        <th>Área (m²)</th>
+                        <th>AC</th>
+                        <th>Ano</th>
+                        <th>Valor da renda (€)</th>
+                        <th>Data disponível</th>
+                        <th><i class="fa-solid fa-star"></i></th>
+                        <th><i class="fa-solid fa-pen"></i></th>
+                        <th><i class="fa-solid fa-trash"></i></th>
+                    </tr>
+                </thead>
+                <tbody id="flats-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="footer-js"></div>
+    <script src="js/data.js"></script>
+    <script src="js/all-flats.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+.home-page {
+    padding: 3.5rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    animation: fadeIn 0.7s ease-out;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.home-page h1 {
+    font-size: 2.8rem;
+    color: var(--color-primary1);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Linha decorativa embaixo do título */
+.home-page h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(to right, var(--color-secondary1), var(--color-primary2));
+    margin: 0.8rem auto 0;
+    border-radius: 3px;
+}
+
+/* Container rolge - telemóvel */
+.favorites-table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 1rem;
+}
+
+.favorites-table-container table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+/* Células da Tabela */
+.favorites-table-container th, 
+.favorites-table-container td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f4f7;
+    white-space: nowrap; 
+}
+
+.favorites-table-container th {
+    background-color: var(--color-primary1);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Estrela */
+.btn-star {
+    background-color: rgba(250, 166, 35, 0.1);
+    color: var(--color-secondary1);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.3rem;
+}
+
+.btn-star:hover {
+    background-color: var(--color-secondary1);
+    color: white;
+    transform: scale(1.1) rotate(15deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home-page h1 {
+        font-size: 1.8rem;
+    }
+    
+    .home-page {
+        padding-top: 2rem;
+    }
+}

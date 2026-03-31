@@ -1,0 +1,115 @@
+/* ==========================================================================
+   ESTILO DA PÁGINA NOVO IMÓVEL
+   ========================================================================== */
+.new-flat-page {
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary1);
+    margin-bottom: 0.5rem;
+}
+
+.page-title p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* O CARD DO FORMULÁRIO */
+.form-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 1.5rem;
+    border: 1px solid #f1f5f9;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* Campos de largura total */
+.full-width, .btn-save {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 0.85rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+    font-family: inherit;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-secondary1);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(250, 166, 35, 0.1);
+}
+
+/* BOTÃO DE SUBMISSÃO */
+.btn-save {
+    margin-top: 1rem;
+    padding: 1.1rem;
+    background: linear-gradient(135deg, var(--color-primary2), var(--color-secondary1));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+    filter: brightness(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 650px) {
+    .form-card {
+        grid-template-columns: 1fr; /* Volta para uma coluna no celular */
+        padding: 1.5rem;
+    }
+    .full-width, .btn-save {
+        grid-column: span 1;
+    }
+}

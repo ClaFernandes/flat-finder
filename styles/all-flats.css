@@ -1,0 +1,196 @@
+/* --- Header e Estrutura Principal --- */
+.page-header {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-primary1), var(--color-secondary2));
+    color: var(--color-white);
+    border-bottom: 5px solid var(--color-secondary1);
+    margin-bottom: 2rem;
+}
+
+/* --- Seção de Filtros --- */
+.filters-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.filter-item label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary1);
+    text-transform: uppercase;
+}
+
+.filter-item input {
+    padding: 0.7rem;
+    border: 1px solid var(--color-neutral);
+    border-radius: var(--border-radius);
+    width: 160px;
+    transition: border-color 0.3s;
+}
+
+/* --- Botão Limpar Filtros --- */
+.clean-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+#clear-filters {
+    padding: 0.7rem 4rem;
+    background-color: var(--color-primary2);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Seção de Ordem --- */
+.sort-section {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.sort-item select {
+    padding: 0.7rem;
+    border: 1px solid var(--color-neutral);
+    border-radius: var(--border-radius);
+    width: 180px;
+    background-color: white;
+    color: var(--color-primary1);
+}
+
+/* Tabela responsiva --- */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    -webkit-overflow-scrolling: touch;
+}
+
+.flats-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+
+.flats-table th {
+    background-color: var(--color-primary1);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.flats-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+/* Botões de Ação */
+.favorite-btn,
+.edit-btn,
+.remove-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0 4px;
+    font-size: 1.3rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Favorito */
+.favorite-btn {
+    background-color: #fff8ed;
+    color: #ffb347;
+}
+
+.favorite-btn:hover {
+    background-color: #ffb347;
+    color: white;
+    transform: rotate(10deg) scale(1.05);
+}
+
+.favorite-btn.is-favorite {
+    background-color: #ffb347;
+    color: white;
+}
+
+.favorite-btn.is-favorite:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+
+/* Editar */
+.edit-btn {
+    background-color: #eef5ff;
+    color: #4a90e2;
+}
+
+.edit-btn:hover {
+    background-color: #4a90e2;
+    color: white;
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* Lixeira */
+.remove-btn {
+    background-color: #fff0f0;
+    color: #ff5c5c;
+}
+
+.remove-btn:hover {
+    background-color: #ff5c5c;
+    color: white;
+    transform: rotate(10deg) scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .filters-section,
+    .sort-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .filter-item input,
+    .sort-item select,
+    #clear-filters {
+        width: 100% !important;
+        max-width: 300px;
+    }
+
+    .table-container {
+        padding: 0 5px;
+    }
+}

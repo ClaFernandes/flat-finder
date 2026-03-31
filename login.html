@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - FindFlat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body class="auth-screen">
+    <main class="login-container">
+        <section class="login-visual">
+            <div class="visual-content">
+                <img src="assets/images/logo.png" alt="FindFlat Logo" class="login-logo">
+                <h2>Encontre o seu próximo lar com facilidade.</h2>
+                <p>A plataforma mais segura e transparente para arrendamento em Portugal.</p>
+            </div>
+        </section>
+
+        <section class="login-content">
+            <div class="form-wrapper">
+                <header class="form-header">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Introduza os seus dados para aceder à sua conta.</p>
+                </header>
+
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="exemplo@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Palavra-passe</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Sua palavra-passe secreta" required>
+                            <i class="fa-solid fa-eye toggle-password"></i>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Entrar no FindFlat</button>
+                    
+                    <div class="divider"><span>OU</span></div>
+
+                    <button type="button" class="btn-reset">
+                        <i class="fa-solid fa-user-xmark"></i> Eliminar minha conta
+                    </button>
+                </form>
+
+                <footer class="form-footer">
+                    Ainda não tem conta? <a href="register.html">Registe-se agora</a>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
